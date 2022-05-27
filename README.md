@@ -13,8 +13,8 @@ Calculators included:
 
 Future plans:
 
-I will convert this to a react website with better user interface and styling once I have some time.
-I will also add other things like mentral circle calculator, Tax, Mortgage, Interest, Credit score and others
-I will add collapsible areas to explain how each calculation is done.
+- I will convert this to a react website with better user interface and styling once I have some time.
+- I will also add other things like mentral circle calculator, Tax, Mortgage, Interest, Credit score and others
+- I will add collapsible areas to explain how each calculation is done.
 
 You can follow me on Twitter @AnatuGreen
