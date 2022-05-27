@@ -56,7 +56,8 @@
     <p>Enter Height in Cm</p>
     <input id="heightCM" placeholder="Your height in centimeter">
     <button onclick="calculateBMI()">Calculate BMI</button>
-    <p id="bmi"></p>
+    <p id="bmi" class="bmicheck"></p>
+    <button onclick="copy()">Copy</button>
 
     <p>Note: BMI does not appli to everyone. <a
             href="https://www.diabetes.ca/managing-my-diabetes/tools---resources/body-mass-index-(bmi)-calculator#:~:text=Body%20Mass%20Index%20is%20a,most%20adults%2018%2D65%20years."
@@ -66,7 +67,10 @@
 
     <p>Made with Love in
         Nigeria. Created by <a href="https://www.twitter.com/anatuGreen"> AnatuGreen</a> , 27/05/2022. </p>
+
+
     <script>
+
 
         function percentageDiff() {
             const secondValue = Number(document.getElementById('secondNum').value)
@@ -114,14 +118,21 @@
             heightCM = (heightCM / 100) ** 2
             const checkObesity = wieghtKG / heightCM
             if (checkObesity >= 25) {
-                console.log("This is considered obese, you may want to talk to your doctor")
                 document.getElementById("bmi").innerHTML = `Your BMI is ${checkObesity}. This is considered obese, you may want to talk to your doctor`
             } else if (checkObesity >= 18.5 && checkObesity <= 24.9) {
                 document.getElementById("bmi").innerHTML = `Your BMI is ${checkObesity}. This is considered a healthy BMI range`
-                console.log("This is considered a healthy BMI range")
             }
+        }
 
 
+        const copyToClipboard = (text) => {
+            navigator.clipboard.writeText(text)
+        }
+
+        function copy() {
+            const textToCopy = document.querySelector('.bmicheck').innerText
+            copyToClipboard(textToCopy)
+            console.log(textToCopy)
         }
 
     </script>
