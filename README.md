@@ -1,7 +1,7 @@
 # Various-Simple-Calculators
 
 This is a collection of simple calculators, I will keep updating them as the days go by.
-I have not styled this at all. I just wanted the functionality so it is just HTML and Javascript and everything on the same single file.
+I have not styled this at all. I just wanted the functionality so it is just HTML and Javascript.
 
 You can use it as you please but give credit to me.
 
