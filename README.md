@@ -10,7 +10,7 @@ Calculators included:
 - Percentage calculator
 - Age Calculator
 - BMI Calculator
-
+- Sale Price Calculator
 Future plans:
 
 - I will convert this to a react website with better user interface and styling once I have some time.

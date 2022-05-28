@@ -68,9 +68,39 @@
     <p>Made with Love in
         Nigeria. Created by <a href="https://www.twitter.com/anatuGreen"> AnatuGreen</a> , 27/05/2022. </p>
 
+    <h2>Sale Price Calculator</h2>
+    <p>Find the price an item will cost after a discount has been applied. For example - what is the price of shoes
+        costing £80
+        with 10% off? </p>
+
+    <h4>Original Price</h4>
+    <input id="originalPriceInput">
+    <h4>How many percent discount</h4>
+    <input id="discountInput">
+    <button onclick="salePrice()">Calculate Sale Price</button>
+    <p id="priceResult"></p>
+    <button onclick="reset5()">Reset</button>
+
+    <!--To calculate discount, it is ease by using the following formulas:
+
+Amount Saved = Orig. Price x Discount % / 100 (a)
+
+Sale Price = Orig. Price - Amount Saved (b)-->
 
     <script>
 
+        function salePrice() {
+            const originalPrice = Number(document.getElementById('originalPriceInput').value)
+            const discountInput = Number(document.getElementById('discountInput').value)
+            const amountSaved = (originalPrice * discountInput) / 100
+            const salePrice = originalPrice - amountSaved
+            document.getElementById('priceResult').innerText = salePrice
+        }
+
+        const reset5 = () => {
+            document.getElementById('originalPriceInput').value = ''
+            document.getElementById('discountInput').value = ''
+        }
 
         function percentageDiff() {
             const secondValue = Number(document.getElementById('secondNum').value)
@@ -139,6 +169,8 @@
         function saveText() {
             document.getElementById("savedText").innerText = document.getElementById("textInput").value
         }
+
+
 
     </script>
 </body>
