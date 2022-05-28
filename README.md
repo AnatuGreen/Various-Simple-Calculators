@@ -18,3 +18,5 @@ Future plans:
 - I will add collapsible areas to explain how each calculation is done.
 
 You can follow me on Twitter @AnatuGreen
+
+Idea is from the site: https://www.webcalculate.com/
