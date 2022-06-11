@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Various Calculators</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Welcome to Various Calculators</h1>
     <h2>Percentage Increase and Decrease Calculator</h2>
-    <p>This calculates the percentage increase between two numbers. Eg, if you you given a loan principal and a refund
-        amount but you wish to find how many percent the interest is based on the two figures</p>
+    <p>
+      This calculates the percentage increase between two numbers. Eg, if you
+      you given a loan principal and a refund amount but you wish to find how
+      many percent the interest is based on the two figures
+    </p>
     <p>Enter the first number</p>
-    <input id="firstNum" class="percentagediff" type="text">
+    <input id="firstNum" class="percentagediff" type="text" />
     <p>Enter the second number</p>
-    <input id="secondNum" class="percentagediff2" type="text">
+    <input id="secondNum" class="percentagediff2" type="text" />
     <button onclick="percentageDiff()">Calculate Percentage difference</button>
     <p id="result"></p>
     <button onclick="reset()">Reset</button>
@@ -24,26 +26,31 @@
     <button onclick="window.print()">Print This Page</button>
 
     <h2>Percentage of a Number Calculator</h2>
-    <p>Find what a given percent of a number is. For example - what is 1.5% of 15? Please enter the percentage in the
-        first
-        field and the number you would like the percentage of in the second field.</p>
+    <p>
+      Find what a given percent of a number is. For example - what is 1.5% of
+      15? Please enter the percentage in the first field and the number you
+      would like the percentage of in the second field.
+    </p>
     <p>This Percent:</p>
-    <input id="thisPercent" type="text">
+    <input id="thisPercent" type="text" />
     <p>of this number:</p>
-    <input id="ofThisNumb" type="text">
-    <button onclick="percentOf()">Calculate Percentage difference</button>
+    <input id="ofThisNumb" type="text" />
+    <button onclick="percentOf()">Calculate Percentage</button>
     <p id="PercentResult"></p>
     <button onclick="reset2()">Reset</button>
 
     <button onclick="window.print()">Print This Page</button>
 
     <h2>Age Calculator</h2>
-    <p>Find the age of a person or anything based on birth year and present or death year</p>
+    <p>
+      Find the age of a person or anything based on birth year and present or
+      death year
+    </p>
     <p>Birth Year:</p>
-    <input id="birthYear" type="text">
+    <input id="birthYear" type="text" />
     <p>Target Year:</p>
-    <input id="targetYear" type="text">
-    <button onclick="ageDiff()">Calculate Percentage difference</button>
+    <input id="targetYear" type="text" />
+    <button onclick="ageDiff()">Calculate Age</button>
     <p id="age"></p>
     <button onclick="reset3()">Reset</button>
 
@@ -52,29 +59,33 @@
     <h2>BMI Calculator</h2>
     <p>Calculate your Body Mass Index</p>
     <p>Enter weight in Kg</p>
-    <input id="wieghtKG" placeholder="Your weight in kilograms">
+    <input id="wieghtKG" placeholder="Your weight in kilograms" />
     <p>Enter Height in Cm</p>
-    <input id="heightCM" placeholder="Your height in centimeter">
+    <input id="heightCM" placeholder="Your height in centimeter" />
     <button onclick="calculateBMI()">Calculate BMI</button>
     <p id="bmi" class="bmicheck"></p>
     <button onclick="copy()">Copy</button>
 
-    <p>Note: BMI does not appli to everyone. <a
-            href="https://www.diabetes.ca/managing-my-diabetes/tools---resources/body-mass-index-(bmi)-calculator#:~:text=Body%20Mass%20Index%20is%20a,most%20adults%2018%2D65%20years."
-            target="_blank">Read
-            more</a> </p>
+    <p>
+      Note: BMI does not appli to everyone.
+      <a
+        href="https://www.diabetes.ca/managing-my-diabetes/tools---resources/body-mass-index-(bmi)-calculator#:~:text=Body%20Mass%20Index%20is%20a,most%20adults%2018%2D65%20years."
+        target="_blank"
+        >Read more</a
+      >
+    </p>
     <button onclick="reset4()">Reset</button>
 
-
     <h2>Sale Price Calculator</h2>
-    <p>Find the price an item will cost after a discount has been applied. For example - what is the price of shoes
-        costing £80
-        with 10% off? </p>
+    <p>
+      Find the price an item will cost after a discount has been applied. For
+      example - what is the price of shoes costing £80 with 10% off?
+    </p>
 
     <h4>Original Price</h4>
-    <input id="originalPriceInput">
+    <input id="originalPriceInput" />
     <h4>How many percent discount</h4>
-    <input id="discountInput">
+    <input id="discountInput" />
     <button onclick="salePrice()">Calculate Sale Price</button>
     <p id="priceResult"></p>
     <button onclick="reset5()">Reset</button>
@@ -85,11 +96,20 @@ Amount Saved = Orig. Price x Discount % / 100 (a)
 
 Sale Price = Orig. Price - Amount Saved (b)-->
 
-    <p>Made with Love in
-        Nigeria. Created by <a href="https://www.twitter.com/anatuGreen"> AnatuGreen</a> , 27/05/2022. </p>
+    <h2>Average Calculator</h2>
+    <p>Find the Average of any number of figures separated by commas.</p>
 
-    <script src="script.js">
-    </script>
-</body>
+    <div>
+      <input id="numbsInput" type="text" />
+      <button onclick="callAverageCalc()">Get Average</button>
+      <p id="averageOutput"></p>
+    </div>
 
+    <p>
+      Made with Love in Nigeria. Created by
+      <a href="https://www.twitter.com/anatuGreen"> AnatuGreen</a> , 27/05/2022.
+    </p>
+
+    <script src="script.js"></script>
+  </body>
 </html>

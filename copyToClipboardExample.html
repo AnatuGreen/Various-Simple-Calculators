@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy To Clipboard</title>
+</head>
+
+<body>
+    <h1>Simple example of copy text to clipboard using Javascript </h1>
+    <input placeholder="Type text" id="textInput">
+    <button onClick="saveText()">Save This</button>
+    <p id="savedText"></p>
+    <button onClick="copy()"> Copy This</button>
+
+
+    <script>
+
+        function saveText() {
+            document.getElementById("savedText").innerText = document.getElementById("textInput").value
+        }
+
+        const copyToClipboard = (text) => {
+            navigator.clipboard.writeText(text)
+        }
+
+        function copy() {
+            const textToCopy = document.getElementById("savedText").innerText;
+            copyToClipboard(textToCopy)
+            alert("Text copied to clipboard")
+        }
+
+    </script>
+</body>
+
+</html>

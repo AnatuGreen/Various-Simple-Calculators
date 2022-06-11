@@ -79,4 +79,52 @@ function saveText() {
     document.getElementById("savedText").innerText = document.getElementById("textInput").value
 }
 
+//Average calculator
 
+function calcAverage(arr) {
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+        //sum = sum + arr[i] which is same as
+        sum += arr[i]
+    }
+    return sum / arr.length
+}
+
+//Using input field to calculate average:
+
+
+function callAverageCalc() {
+    const numbsInput = document.getElementById('numbsInput').value;
+    const numbsInputToArray = numbsInput.split(',');
+    const numbsInputToArrayToNumbs = [];
+
+    numbsInputToArray.forEach(num => {
+        numbsInputToArrayToNumbs.push(Number(num))
+    });
+    console.log(calcAverage(numbsInputToArrayToNumbs))
+
+    document.getElementById('averageOutput').innerText = "The average is: " + calcAverage(numbsInputToArrayToNumbs)
+}
+
+
+
+/*
+
+//Using prompt alternative
+
+const averCalcPrompt = prompt('Please enter the numbers for which you want to calc average separated by commas')
+
+console.log((averCalcPrompt))
+
+var numbersArrStr = averCalcPrompt.split(','); //This takes the input that users entered (separated by commer by the user) and creates an array of strings where each figure entered before a comma is now an array element.
+console.log(numbersArrStr) //Now array of numbers
+var numsArrNum = [] //This empty array will later store our numbers (figures convered from srings to arrays below)
+numbersArrStr.forEach(x => {
+    numsArrNum.push(Number(x))
+}) //We used this to loop through the array of numbers which is still seen as strings now, for each element, we convert it to a number and push it into the empty array we earlier created, numsArrNum.
+
+console.log(numsArrNum)
+
+console.log(calcAverage(numsArrNum)) //Using our already existing calcAverage function to calculate the average of this
+
+*/

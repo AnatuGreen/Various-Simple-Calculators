@@ -17,6 +17,8 @@ Future plans:
 - I will also add other things like mentral circle calculator, Tax, Mortgage, Interest, Credit score and others
 - I will add collapsible areas to explain how each calculation is done.
 
+The project is hosted on github Pages: https://anatugreen.github.io/Various-Simple-Calculators/
+
 You can follow me on Twitter @AnatuGreen
 
 Idea is from the site: https://www.webcalculate.com/
