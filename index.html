@@ -4,45 +4,63 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Various Calculators</title>
   </head>
 
-  <body>
-    <h1>Welcome to Various Calculators</h1>
-    <h2>Percentage Increase and Decrease Calculator</h2>
-    <p>
-      This calculates the percentage increase between two numbers. Eg, if you
-      you given a loan principal and a refund amount but you wish to find how
-      many percent the interest is based on the two figures
-    </p>
-    <p>Enter the first number</p>
-    <input id="firstNum" class="percentagediff" type="text" />
-    <p>Enter the second number</p>
-    <input id="secondNum" class="percentagediff2" type="text" />
-    <button onclick="percentageDiff()">Calculate Percentage difference</button>
-    <p id="result"></p>
-    <button onclick="reset()">Reset</button>
+  <div>
+    <div class="heading" >
+    <h1>Welcome to Various Calculators & Tools</h1>
+    <p>This is an open-source project. Please feel free to to a PR and add more tools!</p>
+    <input type="search" placeholder="Type to search" class="topSearch" />
+    </div>
+<div class="sectionsContainer">
+    <div class="section">
+      <h2>Percentage Increase and Decrease Calculator</h2>
+      <button class="showHide">Show Details</button>
+      <p class="detail">
+        This calculates the percentage increase between two numbers. Eg, if you
+        you given a loan principal and a refund amount but you wish to find how
+        many percent the interest is based on the two figures
+      </p>
+      <p>Enter the first number</p>
+      <input id="firstNum" class="percentagediff" type="text" />
+      <p>Enter the second number</p>
+      <input id="secondNum" class="percentagediff2" type="text" />
+      <button onclick="percentageDiff()">
+        Calculate Percentage difference
+      </button>
+      <p id="result"></p>
+      <button onclick="reset()">Reset</button>
 
-    <button onclick="window.print()">Print This Page</button>
+      <button onclick="window.print()">Print This Page</button>
+    </div>
 
-    <h2>Percentage of a Number Calculator</h2>
-    <p>
-      Find what a given percent of a number is. For example - what is 1.5% of
-      15? Please enter the percentage in the first field and the number you
-      would like the percentage of in the second field.
-    </p>
-    <p>This Percent:</p>
-    <input id="thisPercent" type="text" />
-    <p>of this number:</p>
-    <input id="ofThisNumb" type="text" />
-    <button onclick="percentOf()">Calculate Percentage</button>
-    <p id="PercentResult"></p>
-    <button onclick="reset2()">Reset</button>
+    <div class="section">
+      <h2>Percentage of a Number Calculator</h2>
+      <button class="showHide">Show Details</button>
+      <p class="detail">
+        Find what a given percent of a number is. For example - what is 1.5% of
+        15? Please enter the percentage in the first field and the number you
+        would like the percentage of in the second field.
+      </p>
+      <p>This Percent:</p>
+      <input id="thisPercent" type="text" />
+      <p>of this number:</p>
+      <input id="ofThisNumb" type="text" />
+      <button onclick="percentOf()">Calculate Percentage</button>
+      <p id="PercentResult"></p>
+      <button onclick="reset2()">Reset</button>
 
-    <button onclick="window.print()">Print This Page</button>
+      <button onclick="window.print()">Print This Page</button>
+    </div>
+
+    <div class="section">
 
     <h2>Age Calculator</h2>
-    <p>
+    <button class="showHide">Show Details</button>
+      <p class="detail">
       Find the age of a person or anything based on birth year and present or
       death year
     </p>
@@ -55,9 +73,12 @@
     <button onclick="reset3()">Reset</button>
 
     <button onclick="window.print()">Print This Page</button>
+</div>
 
+<div class="section">
     <h2>BMI Calculator</h2>
-    <p>Calculate your Body Mass Index</p>
+    <button class="showHide">Show Details</button>
+      <p class="detail">Calculate your Body Mass Index</p>
     <p>Enter weight in Kg</p>
     <input id="wieghtKG" placeholder="Your weight in kilograms" />
     <p>Enter Height in Cm</p>
@@ -67,7 +88,7 @@
     <button onclick="copy()">Copy</button>
 
     <p>
-      Note: BMI does not appli to everyone.
+      Note: BMI does not apply to everyone.
       <a
         href="https://www.diabetes.ca/managing-my-diabetes/tools---resources/body-mass-index-(bmi)-calculator#:~:text=Body%20Mass%20Index%20is%20a,most%20adults%2018%2D65%20years."
         target="_blank"
@@ -76,8 +97,12 @@
     </p>
     <button onclick="reset4()">Reset</button>
 
+</div>
+
+<div class="section">
     <h2>Sale Price Calculator</h2>
-    <p>
+    <button class="showHide">Show Details</button>
+      <p class="detail">
       Find the price an item will cost after a discount has been applied. For
       example - what is the price of shoes costing £80 with 10% off?
     </p>
@@ -95,21 +120,30 @@
 Amount Saved = Orig. Price x Discount % / 100 (a)
 
 Sale Price = Orig. Price - Amount Saved (b)-->
+</div>
 
+<div class="section">
     <h2>Average Calculator</h2>
-    <p>Find the Average of any number of figures separated by commas.</p>
+    <button class="showHide">Show Details</button>
+      <p class="detail">Find the Average of any number of figures separated by commas.</p>
 
     <div>
       <input id="numbsInput" type="text" />
       <button onclick="callAverageCalc()">Get Average</button>
       <p id="averageOutput"></p>
     </div>
-
-    <p>
+</div>
+</div>
+<footer>
+ <p>
       Made with Love in Nigeria. Created by
-      <a href="https://www.twitter.com/anatuGreen"> AnatuGreen</a> , 27/05/2022.
+      <a href="https://www.twitter.com/anatutech"> AnatuGreen</a> , 27/05/2022.
     </p>
+</footer>
 
+<!-- My main js file and my Jquery functioins file -->
     <script src="script.js"></script>
+    <script src="my_jquery.js"></script>
+
   </body>
 </html>
